@@ -1,0 +1,12 @@
+
+How to compile:
+
+1. Run ./configure --host=powerpc64-ps3-elf --enable-static --disable-shared 
+2. Run make
+
+How to install:
+1. Copy the include folder to /usr/local/ps3dev/portlibs/ppu/include and rename it to SDL2
+2. Copy the contents of build/.libs to /usr/local/ps3dev/portlibs/ppu/lib
+
+Linking the library:
+Just link "-L/usr/local/ps3dev/portlibs/ppu/lib -lSDL2 -lrsx -lgcm_sys -lio -lsysutil -laudio -lrt -llv2 -lm"
